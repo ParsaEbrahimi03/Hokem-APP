@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/my_background_image"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:alpha="0.5">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="MY"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="310dp"
+        android:background="@color/white"
+        android:alpha="0.5">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:text="THEM"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:background="@color/white"
+        android:alpha="0.5">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="POINT"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
+        android:alpha="0.5">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Hokem"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingEnd="100dp"
+        android:clipToPadding="false"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewComp1"
+        android:layout_width="150dp"
+        android:layout_height="340dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="250dp"
+        android:paddingBottom="200dp"
+        android:clipToPadding="false"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewComp2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="top"
+        android:paddingEnd="100dp"
+        android:clipToPadding="false"
+        android:rotation="180"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewComp3"
+        android:layout_width="150dp"
+        android:layout_height="340dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="250dp"
+        android:paddingBottom="200dp"
+        android:clipToPadding="false"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="150dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/textCardTopGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:text="1"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textCardBottomGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="5dp"
+            android:rotation="180"
+            android:text="1"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageCardTopGame"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/c"
+            app:layout_constraintEnd_toEndOf="@id/textCardTopGame"
+            app:layout_constraintStart_toStartOf="@id/textCardTopGame"
+            app:layout_constraintTop_toBottomOf="@id/textCardTopGame" />
+
+        <ImageView
+            android:id="@+id/imageCardBottomGame"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:rotation="180"
+            android:src="@drawable/c"
+            app:layout_constraintBottom_toTopOf="@id/textCardBottomGame"
+            app:layout_constraintEnd_toEndOf="@id/textCardBottomGame"
+            app:layout_constraintStart_toStartOf="@id/textCardBottomGame" />
+
+        <ImageView
+            android:id="@+id/imageCardCenterGame"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
